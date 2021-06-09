@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Loyalty Card</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block name="loyalty_card_index" template="Ddd_Loyalty::card/index.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Ddd\Loyalty\ViewModel\CardDataProvider</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

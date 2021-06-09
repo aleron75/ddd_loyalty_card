@@ -1,0 +1,15 @@
+{
+  "ddd_card": {
+    "column": {
+      "card_id": true,
+      "customer_id": true,
+      "number": true
+    },
+    "index": {
+      "DDD_CARD_CARD_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

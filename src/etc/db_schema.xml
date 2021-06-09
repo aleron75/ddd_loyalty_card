@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="ddd_card" resource="default" engine="innodb" comment="Card">
+        <column xsi:type="int" name="card_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Card Id Column"/>
+        <column xsi:type="int" name="customer_id" padding="10" unsigned="true" nullable="false" identity="false"
+                comment="Customer Id Column"/>
+        <column xsi:type="varchar" name="number" nullable="false" length="255" comment="Number Column"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="card_id"/>
+        </constraint>
+        <index referenceId="DDD_CARD_CARD_ID" indexType="btree">
+            <column name="card_id"/>
+        </index>
+    </table>
+</schema>
